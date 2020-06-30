@@ -43,7 +43,7 @@ img {
 
 .weather-card-max-temperature,
 .weather-card-min-temperature {
-  margin: 0 0.35em 0 0;
+  margin: 0 0.2em;
 }
 
 .weather-card-min-temperature,
