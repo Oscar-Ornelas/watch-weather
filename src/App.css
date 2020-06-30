@@ -1,5 +1,52 @@
 /* General */
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   padding: 0;
+  background: #000;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+.app {
+  display: flex;
+}
+
+/* WeatherCard */
+.weather-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fff;
+  padding: 1em;
+  max-width: 100px;
+}
+
+.weather-card-day {
+  order: -2;
+  margin: 0;
+}
+
+.weather-card-image {
+  order: -1;
+}
+
+.weather-card-temperatures {
+  display: flex;
+}
+
+.weather-card-max-temperature,
+.weather-card-min-temperature {
+  margin: 0 0.35em 0 0;
+}
+
+.weather-card-min-temperature,
+.weather-card-day {
+  opacity: 0.5;
 }
