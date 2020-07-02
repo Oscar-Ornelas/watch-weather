@@ -64,13 +64,14 @@ function App() {
 
   }
 
-  const weatherCards = weatherInfo && (
+  const weatherCards = (weatherInfo && currentDay) && (
     weatherInfo.map((day, i) => {
       const date = new Date(day.dt * 1000).toGMTString();
       const dayOfWeek = date.substring(0, 3);
 
       return (
         <WeatherCard
+          currentCard={day.dt === currentDay.dt}
           getCurrentDay={getCurrentDay}
           key={i}
           index={i}
@@ -91,8 +92,7 @@ function App() {
           day={getDayOfWeek(currentDay)}
           weatherType={currentDay.weather[0].main}
           weatherImage={`http://openweathermap.org/img/wn/${currentDay.weather[0].icon}@2x.png`}
-          temperature={currentDay.temp.day.toString().substring(0, 2)}
-          precipitation={currentDay.clouds}
+          temperature={currentDay.temp.day.toString().split('.')[0]}
           humidity={currentDay.humidity}
           wind={currentDay.wind_speed}
         />
