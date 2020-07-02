@@ -14,7 +14,7 @@ function WeatherTab(props) {
           <h2 className="weather-tab-temp">{props.temperature}</h2>
           <i>&#176;F</i>
         </div>
-        <div>
+        <div className="weather-tab-side">
           <p className="weather-tab-info">Humidity: {props.humidity}%</p>
           <p className="weather-tab-info">Wind: {props.wind} mph</p>
         </div>
