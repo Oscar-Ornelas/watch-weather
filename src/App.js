@@ -64,7 +64,6 @@ function App() {
 
   }
 
-
   const weatherCards = weatherInfo && (
     weatherInfo.map((day, i) => {
       const date = new Date(day.dt * 1000).toGMTString();
