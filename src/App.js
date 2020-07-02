@@ -16,7 +16,7 @@ function App() {
       .getCurrentPosition(position => {
         getLocation(position.coords.latitude, position.coords.longitude);
         getWeatherInfo(position.coords.latitude, position.coords.longitude);
-      }, console.log);
+      });
     }
   }, []);
 
@@ -24,7 +24,6 @@ function App() {
     fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&exclude={current,minutely,hourly}&units=imperial&appid=${WEATHER_MAP_API_KEY}`)
     .then(response => response.json())
     .then(data => {
-      console.log(data.daily);
       setWeatherInfo(data.daily);
       setCurrentDay(data.daily[0]);
     })
@@ -71,7 +70,6 @@ function App() {
 
       return (
         <WeatherCard
-          currentCard={day.dt === currentDay.dt}
           getCurrentDay={getCurrentDay}
           key={i}
           index={i}

@@ -7,7 +7,7 @@ function WeatherCard(props) {
   }
 
   return (
-    <section style={{border: props.currentCard ? "0.5px solid #333333" : "none"}} onClick={onClick} className="weather-card">
+    <section onClick={onClick} className="weather-card">
       <p className="weather-card-day">{props.day}</p>
       <div className="weather-card-temperatures">
         <p className="weather-card-max-temperature">{props.maxTemperature}&#176;</p>
