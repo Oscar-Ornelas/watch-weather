@@ -2,7 +2,7 @@ import React from 'react';
 
 function WeatherCard(props) {
   return (
-    <section className="weather-card">
+    <section onClick={() => props.getCurrentDay(props.index)} className="weather-card">
       <p className="weather-card-day">{props.day}</p>
       <div className="weather-card-temperatures">
         <p className="weather-card-max-temperature">{props.maxTemperature}&#176;</p>

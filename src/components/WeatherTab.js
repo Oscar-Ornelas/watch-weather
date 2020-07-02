@@ -9,9 +9,10 @@ function WeatherTab(props) {
         <p className="weather-tab-type">{props.weatherType}</p>
       </div>
       <div className="weather-tab-main">
-        <div>
+        <div className="weather-tab-description">
           <img className="weather-tab-image" src={props.weatherImage}/>
           <h2 className="weather-tab-temp">{props.temperature}</h2>
+          <i>&#176;F</i>
         </div>
         <div>
           <p className="weather-tab-info">Precipitation: {props.precipitation}%</p>
